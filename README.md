@@ -1,1 +1,23 @@
-Power BI to Fabric Migration Tool Overview This is a web application, built using Streamlit, designed to simplify and automate the process of migrating data source configurations from a legacy Power BI environment to a new Microsoft Fabric Data Warehouse or a general SQL Database. It provides a simple, graphical interface for one of the most critical steps in the migration: mapping your original Power BI data source files (which represent datasets or dataflows) to the new target tables in your Fabric-compatible SQL environment. This tool is intended to help organizations transition smoothly from the older Power BI Premium SKUs to the modern, unified Azure-based Fabric capacity (F SKUs). Key Features Web-Based Interface: It’s a clean, interactive app thanks to Streamlit. File Discovery: It automatically scans a local folder you specify to find the source files that need to be migrated. SQL Connection Setup: You can easily configure the connection details for your target SQL Server and Database (for example, the endpoint for your Fabric Data Warehouse). Table Mapping: The app lets you review the discovered source files and manually assign a target table name for each file in the new Fabric database. Migration Summary: Before running the migration, it provides a summary of all your settings and mappings for a final check. Getting Started Prerequisites You must have Python version 3.8 or newer installed on your machine. Installation Steps Clone the Project:Get the code from GitHub: git clone https://github.com/yourusername/your-repo-name.gitcd your-repo-name Use a Virtual Environment (Highly Recommended):Create and activate an isolated environment for your project dependencies: python -m venv venvsource venv/bin/activate (for macOS/Linux)venv\Scripts\activate (for Windows) Install Necessary Libraries:Create a file named requirements.txt with the following content (you may need to install a specific SQL connector like pyodbc or another library like pandas if your script uses it for data manipulation): streamlitpyodbcpandas Then, install them:pip install -r requirements.txt How to Use the Tool Running the Application Start the web app from your terminal:streamlit run Import-DQ_PowerBI_Migration_Tool.py The application will open automatically in your browser at http://localhost:8501. Tool Workflow Configuration: Input the required connection details for your target SQL Server and Database (like the connection string for your Fabric Data Warehouse). File Path: Specify the local directory path where your source files (the data or configuration files from Power BI) are located. Map Tables: Go to the "Table Mapping" tab. Here, you will see a list of discovered source files. For each one, you must manually enter the name you want the corresponding target table to have in your Fabric database. Review: Switch to the "Migration Summary" tab to ensure all configurations and file-to-table mappings are correct. Execute: Click the "Run Migration" button to kick off the process. Contributing to the Project We welcome improvements! If you want to contribute, please follow the standard GitHub workflow: Fork the repository. Create a new feature branch (e.g., git checkout -b feature/CoolNewFeature). Commit your changes (git commit -m 'Added a cool new feature'). Push your branch (git push origin feature/CoolNewFeature). Open a Pull Request for review.
+Power BI to Fabric Migration Tool Overview :
+The web app, which is realized through Streamlit, makes the process of migrating data source configurations from an old Power BI environment to Microsoft Fabrics Data Warehouse or any other SQL Database less complicated and also speeds it up.
+The mapping of the original Power BI data source files (datasets or dataflows) to the new target tables in the Fabric-compatible SQL environment is one of the most important stages in migration, and a graphical interface is provided for that.
+Organizations can use this tool to shift without problems from the old Power BI Premium SKUs to the new and unified Azure-based Fabric capacity (F SKUs).
+
+Key Features :
+1. Web-Based Interface: Clean and interactive interface powered by Streamlit.
+2. File Discovery: Automatically scans a specified local folder to find source files for migration.
+3. SQL Connection Setup: Configure connection details for your target SQL Server and Database (e.g., Fabric Data Warehouse endpoint).
+4. Table Mapping: Review discovered source files and manually assign target table names in the new Fabric database.
+5. Migration Summary: View a summary of all settings and mappings before running the migration.
+
+Getting Started
+Prerequisites:
+Python version 3.8 or newer installed on your machine.
+
+Install Required Libraries:
+streamlit
+pyodbc
+pandas
+
+Running the Application:
+streamlit run Import-DQ_PowerBI_Migration_Tool.py
