@@ -354,9 +354,9 @@ elif st.session_state.current_step == 2:
         Click the button below to scan for .tmdl files in your specified folder.
         
         The tool will:
-        - Search for all .tmdl files
-        - Filter files with partition patterns
-        - Prepare them for migration
+        - Search for all .tmdl files from folder
+        - Filter files with partition patterns as stated in code
+        - Prepare them for migration before proceeding
         """)
         st.markdown('</div>', unsafe_allow_html=True)
         
@@ -508,10 +508,10 @@ elif st.session_state.current_step == 4:
         st.markdown("""
         ### ⚠️ Ready to Migrate
         
-        **Before proceeding:**
-        - Ensure you have a backup of your files (automatic backups will be created)
-        - Verify your table mappings are correct
-        - Make sure the Fabric database is accessible
+        **Before proceeding (for accuracy else not needed):**
+        - Ensure you have a backup of your files ; automatic backups will be created as .BACKUP files
+        - Verify your table mappings are correct in .tmdl file.
+        - Make sure the Fabric database is accessible verify Permissions.
         
         Click the button below to start the migration process.
         """)
@@ -558,7 +558,7 @@ elif st.session_state.current_step == 4:
         st.markdown("""
         ### 🎉 Migration Complete!
         
-        All files have been processed successfully. Backup files have been created with the `.backup` extension.
+        All files have been processed successfully. Backup files have been created with the `.backup` extension ; verify it.
         """)
         st.markdown('</div>', unsafe_allow_html=True)
         
@@ -582,3 +582,4 @@ st.markdown("""
         <small>Power BI to Microsoft Fabric Migration Tool | Built with Streamlit</small>
     </div>
 """, unsafe_allow_html=True)
+
